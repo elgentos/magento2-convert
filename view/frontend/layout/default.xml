@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <block name="convert.script" template="Elgentos_Convert::script.phtml"/>
+
+        <block name="convert.page-type" template="Elgentos_Convert::page-type.phtml">
+            <arguments>
+                <argument name="_conv_page_type" xsi:type="string">Tesssst</argument>
+            </arguments>
+        </block>
+
+        <block name="convert.event" template="Elgentos_Convert::event.phtml"/>
+
+        <move element="convert.script" destination="head.additional" before="-"/>
+        <move element="convert.page-type" destination="head.additional" before="-"/>
+        <move element="convert.event" destination="after.body.start"/>
+    </body>
+</page>
