@@ -1,3 +1,19 @@
+<?php
+
+use Elgentos\Convert\ViewModel\Convert;
+use Hyva\Theme\Model\ViewModelRegistry;
+use Magento\Framework\Escaper;
+
+/** @var Escaper $escaper */
+/** @var ViewModelRegistry $viewModels */
+
+/** @var Convert $config */
+$config = $viewModels->require(Convert::class);
+
+?>
+
+<?php if ($config->isEnabled()): ?>
 <!-- Begin Convert Experiences Script -->
-<script src="//cdn-4.convertexperiments.com/js/10042640-10043544.js"></script>
+<script src="<?= $escaper->escapeUrl($config->getGeneralConvertJsUrl()) ?>"></script>
 <!-- End Convert Experiences Script -->
+<?php endif; ?>

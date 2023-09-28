@@ -1,17 +1,25 @@
 <?php
 
+use Elgentos\Convert\ViewModel\Convert;
+use Hyva\Theme\Model\ViewModelRegistry;
 use Magento\Framework\Escaper;
 use Magento\Framework\View\Element\Template;
 
 /** @var Template $block */
 /** @var Escaper $escaper */
+/** @var ViewModelRegistry $viewModels */
+
+/** @var Convert $config */
+$config = $viewModels->require(Convert::class);
 
 $convPageType = $block->getData('_conv_page_type');
 
 ?>
 
-<!-- Begin Convert Experiences -->
+<?php if ($config->isEnabled()): ?>
+<!-- Begin Convert Experiences PageType -->
 <script>
     const _conv_page_type = '<?= $escaper->escapeJs($convPageType) ?>';
 </script>
-<!-- End Convert Experiences -->
+<!-- End Convert Experiences PageType -->
+<?php endif; ?>

@@ -1,6 +1,20 @@
+<?php
+
+use Elgentos\Convert\ViewModel\Convert;
+use Hyva\Theme\Model\ViewModelRegistry;
+
+/** @var ViewModelRegistry $viewModels */
+
+/** @var Convert $config */
+$config = $viewModels->require(Convert::class);
+
+?>
+
+<?php if ($config->isEnabled()): ?>
 <!-- Begin Convert Experiences Events -->
 <script>
     window._conv_q = window._conv_q || [];
     _conv_q.push(["triggerConversion", "event_id"]); // @todo fill this with the required id's given in the documentation
 </script>
 <!-- End Convert Experiences Events -->
+<?php endif; ?>
