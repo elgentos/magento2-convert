@@ -16,8 +16,6 @@
             </arguments>
         </block>
 
-        <block name="convert.event" template="Elgentos_Convert::event.phtml"/>
-
         <move element="convert.script" destination="head.additional" before="-"/>
         <move element="convert.page-type" destination="head.additional" before="-"/>
         <move element="convert.event" destination="after.body.start"/>

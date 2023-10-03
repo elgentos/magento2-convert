@@ -2,7 +2,11 @@
 
 use Elgentos\Convert\ViewModel\Convert;
 use Hyva\Theme\Model\ViewModelRegistry;
+use Magento\Backend\Block\Template;
+use Magento\Framework\Escaper;
 
+/** @var Template $block */
+/** @var Escaper $escaper */
 /** @var ViewModelRegistry $viewModels */
 
 /** @var Convert $config */
@@ -13,8 +17,10 @@ $config = $viewModels->require(Convert::class);
 <?php if ($config->isEnabled()): ?>
 <!-- Begin Convert Experiences Events -->
 <script>
-    window._conv_q = window._conv_q || [];
-    _conv_q.push(["triggerConversion", "event_id"]); // @todo fill this with the required id's given in the documentation
+    document.addEventListener(
+        'load',
+        () => convQPush('<?= $escaper->escapeJs($block->getData('event_id')) ?>')
+    );
 </script>
 <!-- End Convert Experiences Events -->
 <?php endif; ?>

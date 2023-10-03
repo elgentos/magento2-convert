@@ -15,5 +15,12 @@ $config = $viewModels->require(Convert::class);
 <?php if ($config->isEnabled()): ?>
 <!-- Begin Convert Experiences Script -->
 <script src="<?= $escaper->escapeUrl($config->getGeneralConvertJsUrl()) ?>"></script>
+
+<script>
+    function convQPush(eventId) {
+        window._conv_q = window._conv_q || [];
+        _conv_q.push(["triggerConversion", eventId]);
+    }
+</script>
 <!-- End Convert Experiences Script -->
 <?php endif; ?>
