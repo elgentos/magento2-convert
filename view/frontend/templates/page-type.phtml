@@ -6,16 +6,14 @@
  */
 
 use Elgentos\Convert\ViewModel\Convert;
-use Hyva\Theme\Model\ViewModelRegistry;
 use Magento\Framework\Escaper;
 use Magento\Framework\View\Element\Template;
 
 /** @var Template $block */
 /** @var Escaper $escaper */
-/** @var ViewModelRegistry $viewModels */
 
 /** @var Convert $config */
-$config = $viewModels->require(Convert::class);
+$config = $block->getData('view_model');
 
 $convPageType = $block->getData('_conv_page_type');
 

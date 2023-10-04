@@ -6,9 +6,5 @@
  */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
-    <module name="Elgentos_Convert">
-        <sequence>
-            <module name="Hyva_Theme"/>
-        </sequence>
-    </module>
+    <module name="Elgentos_Convert"/>
 </config>

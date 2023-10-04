@@ -8,7 +8,11 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-        <block name="convert.script" template="Elgentos_Convert::script.phtml"/>
+        <block name="convert.script" template="Elgentos_Convert::script.phtml">
+            <arguments>
+                <argument name="view_model" xsi:type="object">Elgentos\Convert\ViewModel\Convert</argument>
+            </arguments>
+        </block>
 
         <block
                 name="convert.page-type"
@@ -16,6 +20,7 @@
                 ifconfig="elgentos_convert/general/enabled"
         >
             <arguments>
+                <argument name="view_model" xsi:type="object">Elgentos\Convert\ViewModel\Convert</argument>
                 <argument name="_conv_page_type" xsi:type="string"></argument>
             </arguments>
         </block>
