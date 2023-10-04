@@ -1,0 +1,14 @@
+{
+    "name": "elgentos/magento2-convert",
+    "description": "Elgentos_Convert for Magento 2",
+    "type": "magento2-module",
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Elgentos\\Magento2Convert\\": ""
+        }
+    },
+    "require": {}
+}
