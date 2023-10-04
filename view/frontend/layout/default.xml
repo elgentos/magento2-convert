@@ -16,7 +16,7 @@
                 ifconfig="elgentos_convert/general/enabled"
         >
             <arguments>
-                <argument name="_conv_page_type" xsi:type="string">Tesssst</argument>
+                <argument name="_conv_page_type" xsi:type="string"></argument>
             </arguments>
         </block>
 
