@@ -10,7 +10,11 @@
     <body>
         <block name="convert.script" template="Elgentos_Convert::script.phtml"/>
 
-        <block name="convert.page-type" template="Elgentos_Convert::page-type.phtml">
+        <block
+                name="convert.page-type"
+                template="Elgentos_Convert::page-type.phtml"
+                ifconfig="elgentos_convert/general/enabled"
+        >
             <arguments>
                 <argument name="_conv_page_type" xsi:type="string">Tesssst</argument>
             </arguments>
