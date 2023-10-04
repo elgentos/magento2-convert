@@ -1,0 +1,19 @@
+<?php
+
+use Magento\Backend\Block\Template;
+use Magento\Framework\Escaper;
+
+/** @var Template $block */
+/** @var Escaper $escaper */
+
+?>
+
+<!-- Begin Convert Experiences Events -->
+<script>
+    document.addEventListener(
+        'load',
+        () => convQPush(
+            '<?= $escaper->escapeJs($block->getData('event_id')) ?>')
+    );
+</script>
+<!-- End Convert Experiences Events -->
