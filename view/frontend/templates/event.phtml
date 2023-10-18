@@ -11,7 +11,7 @@ use Magento\Framework\Escaper;
 <!-- Begin Convert Experiences Events -->
 <script>
     document.addEventListener(
-        'load',
+        'DOMContentLoaded',
         () => convQPush(
             '<?= $escaper->escapeJs($block->getData('event_id')) ?>')
     );
